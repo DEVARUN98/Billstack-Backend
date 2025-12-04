@@ -1,7 +1,7 @@
 # serializers.py
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile, InventoryItem
+from .models import UserProfile, InventoryItem, Customers, Products,Invoices,InvoiceNew
 
 class InventoryItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -45,3 +45,24 @@ class UserSerializer(serializers.ModelSerializer):
             profile.expiry_date = profile_data.get('expiry_date', profile.expiry_date)
             profile.save()
         return instance
+
+
+class CustomersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Customers
+        fields = ['id', 'customer_name', 'mob_no', 'product_purchased']
+
+class ProductsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Products
+        fields = ['id', 'product_name', 'price', 'product_quantity']
+
+class InvoicesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Invoices
+        fields = ['id', 'customer', 'product', 'quantity', 'total', 'date_created']
+
+class InvoiceNewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InvoiceNew
+        fields = ['id', 'customer_name', 'phone', 'items', 'subtotal', 'gst', 'discount', 'total', 'date']
