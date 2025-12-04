@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vfql)zos4l3lkiim($94rmuxv1xrd5u17=%1xqnoqvot#g4x%5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","billstack-backend-eb1d.onrender.com"]
 
 
 # Application definition
