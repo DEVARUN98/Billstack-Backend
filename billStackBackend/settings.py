@@ -160,8 +160,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://insurestack.netlify.app"
 ]
 CORS_ALLOW_CREDENTIALS = True 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
+    "https://insurestack.netlify.app"
 ]
+
+# CORS_ALLOW_CREDENTIALS = True
+# SESSION_COOKIE_SAMESITE = 'None'  # Required for cross-origin
+# SESSION_COOKIE_SECURE = True       # HTTPS only on Render
+# CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SAMESITE = 'None'
