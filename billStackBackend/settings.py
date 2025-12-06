@@ -307,7 +307,7 @@ SESSION_COOKIE_AGE = 24 * 60 * 60  # 24 hours
 SESSION_COOKIE_HTTPONLY = True     # XSS protection
 SESSION_COOKIE_SECURE = True       # 👈 FIXED: HTTPS only (Render)
 SESSION_COOKIE_SAMESITE = 'None'   # 👈 FIXED: Cross-origin required
-SESSION_COOKIE_DOMAIN = '.onrender.com'  # 👈 ADDED: Shared domain
+# SESSION_COOKIE_DOMAIN = '.onrender.com'  # 👈 ADDED: Shared domain
 CSRF_COOKIE_SECURE = True          # 👈 ADDED: HTTPS only
 CSRF_COOKIE_SAMESITE = 'None'      # 👈 ADDED: Cross-origin required
 
